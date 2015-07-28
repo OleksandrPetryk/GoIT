@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        function User(userData)
+        {
+            if (userData)
+            {
+                this.name = userData.name;
+                this.age = userData.age;
+            }
+            else
+            {
+                this.name = 'Аноним';
+            }
+
+            this.sayHi = function () {
+
+                alert(this.name)
+            };
+        }
+
+        // Использование
+        var guest = new User();
+
+        guest.sayHi(); // Аноним
+
+        var knownUser = new User({ name: 'Вася', age: 25 });
+        knownUser.sayHi(); // Вася
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+
+        function Article() 
+        {    
+            
+            Article.count++;    
+            //...
+        }
+        
+        Article.count = 0;
+
+        Article.showCount = function ()
+        {    
+            alert( this.count ); 
+            // (1)
+        };
+            // использованиеnew Article();
+            new Article();
+            Article.showCount(); // (2)
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        var user = {
+            name: 'Вася',
+            toString: function () { return this.name; }
+        };
+
+        Object.defineProperty(user, 'toString', { enumerable: false });
+
+        for (var key in user)
+            alert(user[key]);  // name, toString
+
+
+    </script>
+
+</body>
+</html>

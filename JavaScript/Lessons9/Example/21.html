@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+
+        function bind(func, context)
+        {
+            return function ()
+            {
+                return func.apply(context, arguments);
+            };
+        }
+
+        var user =
+            {
+                firstName: 'Вася', sayHi: function ()
+                {
+                    alert(this.firstName);
+                }
+            };
+
+        var user = 
+            {    
+                firstName: 'Вася',    
+                sayHi: function(who) 
+                { 
+                    // здесь у sayHi есть один аргумент        
+                    alert(this.firstName + ': Привет, ' + who);
+                }
+            };
+
+        var sayHi = bind(user.sayHi, user);
+        // контекст Вася, а аргумент передаётся 'как есть'
+        sayHi('Петя');
+        // Вася: Привет, Петя
+        sayHi('Маша');
+        // Вася: Привет, Маша
+
+
+    </script>
+
+</body>
+</html>

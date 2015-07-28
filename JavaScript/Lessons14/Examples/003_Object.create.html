@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+
+        
+        var fuel = {};
+
+        fuel.gas = 22.6;
+        fuel.diesel = 20.5;
+
+        //alert(fuel.toString())
+        //=> function toString()
+
+
+        var fuel = Object.create(null);
+
+        fuel.gas = 22.6;
+        fuel.diesel = 20.5;
+
+        console.log(fuel.toString)
+        //=> undefined
+
+
+    </script>
+
+
+</body>
+</html>

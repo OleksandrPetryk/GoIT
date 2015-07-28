@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        function Journal() { /*...*/ }
+
+        Journal.formatDate = function (date)
+        {
+            return date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+        };
+
+        // ни одного объекта Journal нет, просто форматируем дату
+        alert(Journal.formatDate( new Date() ));
+
+
+    </script>
+
+
+</body>
+</html>

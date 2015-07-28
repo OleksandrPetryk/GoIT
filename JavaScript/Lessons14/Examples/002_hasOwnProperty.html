@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        var Vehicle = {
+            canRoll: true
+        };
+
+        var Moto = {
+            __proto__: Vehicle,
+            places: 2
+        };
+
+        for (var key in Moto) {
+            console.log(key + " = " + Moto[key]); //=> true, 2
+        }
+
+        for (var key in Moto) {
+            if (Moto.hasOwnProperty(key)) console.log(key + ' = ' + Moto[key]); //=> 2
+        }
+
+
+    </script>
+</body>
+</html>

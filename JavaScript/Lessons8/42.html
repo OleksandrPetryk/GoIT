@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        var user = {
+
+            firstName: 'Вася',
+            surname: 'Петров',
+            get fullName() {
+
+                return this.firstName + ' ' + this.surname;
+            },
+
+            set fullName(value)
+            {
+                var split = value.split(' ');
+                this.firstName = split[0];
+                this.surname = split[1];
+            }
+        };
+
+        alert(user.fullName); // Вася Петров (из геттера)
+        user.fullName = 'Петя Иванов';
+        alert(user.firstName);
+        // Петя  (поставил сеттер)
+        alert(user.surname);
+        // Иванов (поставил сеттер)
+    
+    </script>
+
+</body>
+</html>

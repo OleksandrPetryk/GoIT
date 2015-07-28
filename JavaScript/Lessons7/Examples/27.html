@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+
+        function makeCounter() {
+            var currentCount = 1;
+            return function () {
+                return currentCount++;
+            };
+        }
+
+        var counter = makeCounter();
+
+        var counter2 = makeCounter();
+
+        alert(counter());
+        alert(counter());
+        alert(counter());
+
+        alert(counter2());
+        
+
+    </script>
+
+</body>
+</html>

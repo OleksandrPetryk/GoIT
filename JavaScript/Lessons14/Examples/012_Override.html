@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        function Vehicle(make) {
+            this.make = make;
+        }
+        Vehicle.prototype.doNoize = function() {
+            console.log( this.make + "sounds dangerous!" );
+        }
+        function Moto(make) {
+            Vehicle.call(this, make);
+        }
+
+        Moto.prototype = Object.create(Vehicle.prototype);
+        Moto.prototype.constructor = Moto;
+
+        Moto.prototype.doNoize = function() { 
+            Vehicle.prototype.doNoize.apply(this, arguments); 
+            console.log( "Wzzzzzaaaammm!" );
+        };
+
+        var moto = new Moto( "Kawasaki" ); 
+        console.log( moto.doNoize() ); //=> Kawasaki sounds dangerous! \n Wzzzzzaaaammm!
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        var user =
+            {
+                firstName: 'Вася',
+                sayHi: function ()
+                {
+                    alert(this.firstName);
+                }
+            };
+
+
+        //setTimeout(bind(user.sayHi, user), 1000);
+        setTimeout(user.sayHi.bind(user), 1000); // аналог через встроенный метод
+
+
+    </script>
+</body>
+</html>

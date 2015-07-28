@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+
+        function work(a)
+        {
+            alert("Hello from work" + a)
+        }
+
+        function makeLogging(f, log)
+        {
+            function wrapper(a)
+            {
+                log.push(a);
+                return f.call(this, a);
+
+            } return wrapper;
+        }
+
+        var log = [];
+        work = makeLogging(work, log);
+        work(1); // 1, добавлено в log
+        work(5); // 5, добавлено в log
+
+        alert(log); // [1,5]
+
+
+    </script>
+</body>
+</html>

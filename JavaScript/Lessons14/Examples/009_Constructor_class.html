@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        //function Vehicle() {
+
+        //    this.a = "Hello";
+        //    this.b = "World";
+        //    this.doNoize = function() { console.log("WooWoo!") };
+        //}
+
+        //var Mazda = new Vehicle();
+        //var Toyota = new Vehicle ();
+
+        //console.log( Mazda.hasOwnProperty("doNoize") ); //=> true
+        //console.log( Mazda.doNoize == Toyota.doNoize ); //=> false
+
+        //=========================
+
+        function Vehicle () {}
+
+        Vehicle.doNoize = function() {console.log("WooWoo!") }
+
+        var Mazda = new Vehicle ()
+        var Toyota = new Vehicle ();
+
+        console.log( Mazda.hasOwnProperty("doNoize") ); //=> false
+        console.log( Mazda.doNoize == Toyota.doNoize ); //=> true
+        
+
+    </script>
+</body>
+</html>

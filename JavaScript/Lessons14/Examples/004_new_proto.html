@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        //Не работает в IE10
+
+        var Lexus = {
+            isCool: "Hell yeah!"
+        };
+
+        function ModelF(type) {
+            this.type = type;
+            this.__proto__ = Lexus;
+        }
+
+
+        var car = new ModelF("Sport coupe");
+
+        console.log(car.isCool); //=> “Hell yeah!”
+        
+
+        //var Lexus = {
+        //    isCool: "Hell yeah!"
+        //};
+
+        //function ModelF(type) {
+        //    this.type = type;
+        //}
+
+        //ModelF.prototype = Lexus;
+
+        //var car = new ModelF("Sport coupe");
+
+        //console.log(car.isCool); //=> “Hell yeah!”
+
+    </script>
+
+</body>
+</html>

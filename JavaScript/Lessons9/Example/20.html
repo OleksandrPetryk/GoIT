@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function bind(func, context)
+        {
+            return function ()
+            {
+                return func.apply(context, arguments);
+            };
+        }
+
+        var user =
+            {
+                firstName: 'Вася',
+                sayHi: function ()
+                {
+                    alert(this.firstName);
+                }
+            };
+
+        setTimeout(bind(user.sayHi, user), 1000);
+
+
+
+    </script>
+</body>
+</html>

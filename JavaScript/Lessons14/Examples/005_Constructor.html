@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        function Vehicle(name) {
+            this.name = name;
+        }
+
+        //function Vehicle2(name) {
+        //    this.name1 = name;
+        //    this.name2 = name;
+        //}
+
+        // Vehicle.prototype = {
+        //     constructor: Vehicle2
+        // }
+
+        var mazda = new Vehicle("Mazda");
+        var toyota = new mazda.constructor("Toyota");
+
+        console.log(mazda.name); //=> Mazda
+        console.log(toyota.name); //=> Toyota
+
+
+    </script>
+
+</body>
+</html>

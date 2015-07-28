@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function sayHi()
+        {
+            alert(this.name);
+        }
+
+        sayHi.test = 5;
+        alert(sayHi.test); // 5
+
+        var bound = sayHi.bind({ name: 'Вася' });
+
+       alert( bound.test); // что выведет? почему?
+
+
+    </script>
+
+</body>
+</html>

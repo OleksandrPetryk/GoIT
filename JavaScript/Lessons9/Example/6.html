@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+
+        var user = { firstName: 'Василий', surname: 'Петров', patronym: 'Иванович' };
+
+        function showFullName(firstPart, lastPart)
+        {
+            alert(this[firstPart] + ' ' + this[lastPart]);
+        }
+
+        // f.call(контекст, аргумент1, аргумент2, ...)
+        showFullName.call(user, 'firstName', 'surname');  // 'Василий Петров'
+        showFullName.call(user, 'firstName', 'patronym'); // 'Василий Иванович'
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+
+    <script>
+
+        
+        var user = {};
+        
+        Object.defineProperty(user, 'name', {  
+            value: 'Вася',    
+            writable: false, // запретить присвоение 'user.name='   
+            configurable: false // запретить удаление 'delete user.name'
+        });
+
+        
+        user.name = 'Петя';
+        delete user.name;
+
+        alert(user.name);
+
+
+    </script>
+
+</body>
+</html>

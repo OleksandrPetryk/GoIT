@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function printArgs() {
+            var join = [].join; // скопируем ссылку на функцию в переменную    
+            // вызовем join с this=arguments,    
+            // этот вызов эквивалентен arguments.join(':') из примера выше    
+
+            var argStr = join.call(arguments, ':');
+            alert(argStr);
+        }
+            // сработает и выведет 1:2:3}
+            printArgs(1, 2, 3);
+
+
+    </script>
+</body>
+</html>

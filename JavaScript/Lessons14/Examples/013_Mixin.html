@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        function Moto(make) {
+            this.make = make;	
+        }
+
+        var stuntsMixins = {
+            doBurnout: function() { console.log( this.make + " does a burnout!" ) },
+            doWheelie: function () { console.log(this.make + " does a wheelie!") }
+        }
+
+        for ( var mixin in stuntsMixins ) {
+            Moto.prototype[mixin] = stuntMixins[mixin];
+        }
+
+        var moto = new Moto( "Jawa" );
+
+        console.log( moto.doBurnout() ); //=> Jawa does a burnout!
+
+
+    </script>
+
+</body>
+</html>

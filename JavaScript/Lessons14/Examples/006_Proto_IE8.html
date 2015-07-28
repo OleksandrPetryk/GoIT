@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        function inherits(proto) {
+            function F() { };
+
+            F.prototype = proto;
+
+            return new F();
+        }
+
+        var Vehicle = { rolls: true };
+        var Moto = inherits(Vehicle);
+
+        alert(Moto.rolls); //=> true
+
+        
+
+        // Полифил
+        // if (!Object.create) Object.create = inherits;
+        // var Moto = Object.create(Vehicle);
+
+
+    </script>
+
+</body>
+</html>

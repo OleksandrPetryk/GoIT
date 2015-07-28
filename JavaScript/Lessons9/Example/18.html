@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function bind(func, context) 
+        {    
+            return function() 
+            { 
+                // (*)        
+                return func.apply(context, arguments);
+            };
+        }
+
+        function f()
+        {
+            alert(this);
+        }
+
+        var g = bind(f, 'Context');
+        g(); // Context
+
+
+    </script>
+</body>
+</html>

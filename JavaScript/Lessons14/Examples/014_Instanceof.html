@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        function Vehicle() {
+            // …
+        }
+        function Moto() {
+            // …
+        }
+
+        Moto.prototype = Object.create(new Vehicle);
+        Moto.prototype.constructor = Moto;
+
+        var mt = new Moto;
+
+        console.log(mt instanceof Moto); //=> true
+        console.log(mt instanceof Vehicle); //=> true
+        console.log(mt instanceof Object); //=> true
+
+    </script>
+
+</body>
+</html>

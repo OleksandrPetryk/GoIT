@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        function printArgs() 
+        {    
+            // вызов arr.slice() скопирует 
+            //все элементы из this в новый массив    
+            var args = [].slice.call(arguments);    
+            alert( args.join(', ') ); 
+            
+            // args - полноценный массив из аргументов
+        }
+        
+        printArgs('Привет', 'мой', 'мир'); // Привет, мой, мир
+
+
+    </script>
+
+</body>
+</html>

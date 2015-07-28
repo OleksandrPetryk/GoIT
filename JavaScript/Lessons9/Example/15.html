@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+
+        //setTimeout(function ()
+        //{
+        //    alert('Привет');
+        //}, 1000);
+
+        var user = {
+
+             firstName: 'Вася',
+             sayHi: function () {
+
+                 alert(user.firstName);
+             }
+        };
+
+        //setTimeout(user.sayHi, 1000); // undefined (не Вася
+
+        user.sayHi();
+
+    </script>
+</body>
+</html>

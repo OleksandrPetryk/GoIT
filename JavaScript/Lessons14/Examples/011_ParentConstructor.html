@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script>
+
+        function Vehicle(make, model) {
+            this.make = make;
+            this.model = model;
+        }
+
+        Vehicle.prototype.doNoize = function() {
+            console.log( this.make + " " + this.model  + "sounds dangerous!")
+        }
+
+        function Moto(make, model) {
+            Vehicle.call(this, make, model);
+        }
+
+        Moto.prototype = Object.create(Vehicle.prototype);
+        Moto.prototype.constructor = Moto;
+
+        var moto = new Moto("Kawasaki", "Ninja"); 
+        console.log( moto.doNoize() ); //=> Kawasaki Ninja sounds dangerous!
+
+
+    </script>
+
+</body>
+</html>
